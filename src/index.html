@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>Document</title>
+  <title>Currency Exchanger</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="searchForm">
+      <form id="form">
+        <input type="text" id="currency" placeholder="currency type" />
+        <input type="text" id="amount" placeholder="currency amount" />
+        <input type="number" id="new-currency" placeholder="convert to this currency" />
+      </form>
+      <div class="buttonDiv">
+        <button type="button" id="button">Run Conversion</button>
+      </div>
+    </div>
+    <div id="output"></div>
+  </div>
 </body>
 </html>
