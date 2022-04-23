@@ -7,7 +7,7 @@ import { CurrencyExchanger } from '../src/exchanger.js';
 
 function getElements(response,currency1, currency2, amount) {
   if (response.result) {
-    $("#output").text(`The exchange rate for ${currency1} to ${currency2} is ${amount}`);
+    $("#output").text(`The exchange rate for ${currency1} to ${currency2} is ${response.conversion_rates[currency2]*amount}`);
   }else {
     $("#output").text(`there was an error: ${response.message}`);
   }
