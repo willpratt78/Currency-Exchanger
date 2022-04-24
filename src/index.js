@@ -21,7 +21,7 @@ function getElements(response,currency1, currency2, amount) {
 }
 
 
-$(document).ready(function() {
+$(function() {
   $("#button").on("click", function() {
     let currency1 = $("#currency1").val();
     let currency2 = $("#currency2").val();
