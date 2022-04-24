@@ -23,6 +23,7 @@ function getElements(response,currency1, currency2, amount) {
 
 $(document).ready(function() {
   $("#button").on("click", function() {
+    sessionStorage(response.conversion_rates)
     let currency1 = $("#currency1").val();
     let currency2 = $("#currency2").val();
     let amount = $("#amount").val();
@@ -35,4 +36,3 @@ $(document).ready(function() {
 });
 
 
-sessionStorage
