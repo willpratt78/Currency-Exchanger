@@ -6,12 +6,14 @@ import { CurrencyExchanger } from '../src/exchanger.js';
 
 
 function getElements(response,currency1, currency2, amount) {
-  console.log(response);
-  if (response.result) {
-    $("#output").text(`The exchange rate for ${currency1} to ${currency2} is ${response.conversion_rates[currency2]*amount}`);
+  console.log(amount);
+  if (amount === ""){
+  $("#output").text("please input a number")
   }else if (currency1 === "") {
     $("#output").text("please input a starting currency");
-  }else {
+  }else if (response.result) {
+    $("#output").text(`The exchange rate for ${currency1} to ${currency2} is ${response.conversion_rates[currency2]*amount}`);
+  }else{
     $("#output").text(`there was an error: ${response.message}`);
   }
 }
