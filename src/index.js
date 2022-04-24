@@ -30,7 +30,8 @@ $(function() {
     CurrencyExchanger.amount(currency1, currency2, amount)
       .then(function(response) {
         getElements(response, currency1, currency2, amount);
-        sessionStorage.setItem("storedApi", response);
       });
   });
 });
+
+// 88 API calls, have done 2 addional ones
