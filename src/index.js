@@ -30,9 +30,7 @@ $(function() {
     CurrencyExchanger.amount(currency1, currency2, amount)
       .then(function(response) {
         getElements(response, currency1, currency2, amount);
-        sessionStorage.setItem("storedApi", response.conversion_rates);
+        sessionStorage.setItem("storedApi", response);
       });
   });
 });
-
-
