@@ -7,11 +7,10 @@ import { CurrencyExchanger } from '../src/exchanger.js';
 
 function getElements(response,currency1, currency2, amount) {
   console.log(response);
-  if (response.TypeError === "Failed to fetch") {
-    $("#output").text("please input a starting currency");
-  }
   if (response.result) {
     $("#output").text(`The exchange rate for ${currency1} to ${currency2} is ${response.conversion_rates[currency2]*amount}`);
+  }else if (currency1 === "") {
+    $("#output").text("please input a starting currency");
   }else {
     $("#output").text(`there was an error: ${response.message}`);
   }
