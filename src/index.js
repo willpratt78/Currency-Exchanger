@@ -6,8 +6,9 @@ import { CurrencyExchanger } from '../src/exchanger.js';
 
 
 function getElements(response,currency1, currency2, amount) {
-  console.log(amount);
-  if (currency1 === "") {
+  console.log(response.conversion_rates);
+  if (response.conversion_rates === undefined) {
+    console.log(response.conversion_rates)
     $("#output").text("please input a starting currency");
   }else if (amount === ""){
     $("#output").text("please input a number");
