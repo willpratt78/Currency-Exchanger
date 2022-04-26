@@ -20,6 +20,10 @@ This application will calculate the exchange rate for any currency.
 
 * Navigate to Repository and clone repo
 * open in VSC with gitbash
+* Navigate to [API Key](https://www.exchangerate-api.com/)
+* Create a free API key following website instructions 
+* Create a .env file
+* input your api key as API_KEY=[your API key]
 * In VSC terminal run npm install
 * In VSC terminal run npm test to see test made
 * In VSC terminal run npm run build
